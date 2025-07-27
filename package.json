@@ -3,7 +3,7 @@
   "type": "module",
   "homepage": "https://dompile.github.io/website/",
   "scripts": {
-    "build": "npx dompile build",
-    "dev": "npx dompile serve"
+    "build": "npx dompile/cli build",
+    "dev": "npx dompile/cli serve"
   }
 }
