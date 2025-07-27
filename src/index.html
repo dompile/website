@@ -2,58 +2,67 @@
 <html lang="en">
 
 <head>
-  <title>Home - DOMpile Demo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dompile – Build Static Sites Peacefully</title>
+  <meta name="description"
+    content="A modern static site generator that simplifies building maintainable websites with server-side includes and live reload." />
+  <link rel="stylesheet" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="assets/main.css" />
 </head>
 
 <body>
-  <!--#include virtual="/.components/home-header.html" -->
 
-  <section>
-    <h2>Why Choose DOMpile?</h2>
-    <div class="features">
-      <div class="card" data-augmented-ui="tl-clip tr-scoop both">
-        <h3>🌱 Simple Includes</h3>
-        <p>Write <code>&lt;!--#include file="header.html"--&gt;</code> - no complex template engine needed. Pure HTML simplicity.</p>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="https://raw.githubusercontent.com/dompile/cli/main/example/src/imgs/green-banner-800.png"
+          alt="Dompile" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="https://github.com/dompile/cli" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" data-augmented-ui="tl-clip br-clip border">
+      <h1 class="hero-title animate__animated animate__fadeInDown">A More Peaceful Way to Build Static Websites</h1>
+      <p class="hero-tagline animate__animated animate__fadeInDown animate__delay-1s">
+        Dompile is a modern, lightweight static site generator that brings the power of server-side includes, markdown
+        processing, and live reloading to your workflow. Build maintainable static sites with a component-based approach
+        &ndash; no more copy-pasting headers and footers!
+      </p>
+      <div class="hero-cta animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="docs.html" class="cta-button">Get Started</a>
+        <div class="cta-inline">
+          <code class="cta-code">npx dompile/cli serve</code>
+          <button class="copy-btn">Copy</button>
+        </div>
       </div>
-      <div class="card" data-augmented-ui="tr-clip bl-clip both">
-        <h3>⚡ Head Injection</h3>
-        <p>Automatic <code>&lt;head&gt;</code> tag injection across all pages. Global styles and scripts made simple.</p>
-      </div>
-      <div class="card" data-augmented-ui="bl-clip tr-scoop both">
-        <h3>🔧 Modern CLI</h3>
-        <p>Works with Node, Bun, Deno. Supports dry-run, verbose mode, build &amp; serve with live reload.</p>
-      </div>
-      <div class="card" data-augmented-ui="tl-round br-clip both">
-        <h3>🌿 Eco-Friendly</h3>
-        <p>Minimal dependencies, no runtime overhead. Build fast, sustainable websites with a tiny footprint.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="demo">
-    <h2>See It in Action</h2>
-    <pre class="cli" data-augmented-ui="border bl-clip br-clip tr-round">
-$ dompile build
-Processing: index.html => dist/index.html
-Injecting includes into head...
-Build complete in 114 ms
-  </pre>
-  </section>
+    <section class="features-overview">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li><strong>Zero Learning Curve:</strong> Use standard HTML templates and familiar <code>&lt;include&gt;</code>
+          tags or Apache SSI syntax for components.</li>
+        <li><strong>Live Development:</strong> Built-in dev server with auto-reload for a smooth workflow.</li>
+        <li><strong>Flexible &amp; Fast:</strong> Supports Node.js, Deno, or Bun with lightning-fast builds and minimal
+          dependencies.</li>
+        <li><strong>SEO-Ready:</strong> Automatic sitemap generation and easy meta tag management.</li>
+      </ul>
+    </section>
+  </main>
 
-  <section>
-    <h2>Solarpunk Philosophy</h2>
-    <p>Rooted in solarpunk philosophy—a future built on joyful, sustainable simplicity. DOMpile embodies DIY technology, eco-minded design, and digital minimalism. We believe in tools that empower without overwhelming, that build without breaking.</p>
-    <div class="card" data-augmented-ui="r-scoop b-clip both" style="background: linear-gradient(135deg, var(--surface-secondary), var(--surface-primary)); margin: var(--space-8) 0;">
-      <h3>🌟 Our Vision</h3>
-      <p><strong>Technology should feel like gardening—</strong> nurturing, sustainable, and in harmony with natural patterns. Every line of code should serve a purpose, every dependency should earn its place.</p>
-    </div>
-  </section>
+  <footer class="site-footer">
+    <p>&copy; 2025 Dompile Project. All rights reserved.</p>
+  </footer>
 
-  <section id="get-started" style="text-align:center;">
-    <a class="btn" href="getting-started.html" data-augmented-ui="tl-round tr-round bl-clip br-clip">Get Started →</a>
-  </section>
-
-  <!--#include virtual="/.components/footer.html" -->
+  <script src="assets/main.js"></script>
 </body>
 
 </html>
