@@ -1,6 +1,7 @@
 {
   "name": "dompile-starter",
   "type": "module",
+  "homepage": "https://dompile.github.io/website/",
   "scripts": {
     "build": "npx dompile build",
     "dev": "npx dompile serve"
